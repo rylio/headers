@@ -251,8 +251,8 @@ impl Link {
     }
 
     /// Get an iterator over the `Link` header's `LinkValue`s.
-    pub fn iter(&self) -> impl Iterator<Item = LinkValue> + '_ {
-        self.values.iter().cloned()
+    pub fn iter(&self) -> impl Iterator<Item = &LinkValue> + '_ {
+        self.values.iter()
     }
 
     /// Add a `LinkValue` instance to the `Link` header's values.
